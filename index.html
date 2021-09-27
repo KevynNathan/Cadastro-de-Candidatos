@@ -1,12 +1,82 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+<html>
+
+    <head>
+        <title>Cadastro de Candidatos</title>
+        <meta charset="utf-8"/>
+
+        <!-- cdn's -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+
+
+        <!-- scripts css e js -->
+        <script src="main.js"></script>
+        <link rel="stylesheet" href="style.css"/>
+        
+
+    </head>
+
+    <body>
+
+        <!-- div principal -->
+        <div class="jumbotron container mt-5 col-8">
+            <!-- div cadastro -->
+            <div class="col-12">
+                <h4>CADASTRO PARA VAGAS</h4>
+                <form class="formulario">
+                    <div class="form-group">
+                    <label for="nome">Nome</label>
+                    <input type="text" class="form-control" id="nome" placeholder="Digite seu nome" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="sobrenome">Sobrenome</label>
+                        <input type="text" class="form-control" id="sobrenome" placeholder="Digite seu sobrenome" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="cpf">CPF</label>
+                        <input type="text" class="form-control" id="cpf" placeholder="Digite seu CPF" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="data-nasc">Data de Nascimento</label>
+                        <input type="date" class="form-control" id="data-nasc" placeholder="Coloque sua data de nascimento" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-check-label" for="vaga">Selecione a vaga para qual estará aplicando.</label>
+                        <select class="form-control" id="vaga">
+                            <option value="vaga1">Desenvolvedor Júnior</option>
+                            <option value="vaga2">Desenvolvedor Pleno</option>
+                            <option value="vaga3">Desenvolvedor Sênior</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Enviar</button>
+                </form>
+            </div>
+
+        </div>
+
+        <div class="jumbotron container col-8">
+            <!-- div resposta -->
+            <div class="col-12">
+                <h4>TABELA DE INSCRITOS</h4>
+                <table class="table" id="tabela">
+                    <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Nome Completo</th>
+                        <th scope="col">CPF</th>
+                        <th scope="col">Data de Nascimento</th>
+                        <th scope="col">Idade</th>
+                        <th scope="col">Maior de Idade</th>
+                        <th scope="col">Vaga Aplicada</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+                <button type="button" class="btn btn-success" id="btn-inscricao">Enviar Inscrições</button>
+            </div>
+        </div>
+
+    </body>
+
 </html>
