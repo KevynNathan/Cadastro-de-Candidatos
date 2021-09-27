@@ -88,7 +88,7 @@ $(document).ready(function(){
             <tr> 
                 <td>${i+1}</td> 
                 <td>${cadastros[i].nome_completo.nome + " " + cadastros[i].nome_completo.sobrenome}</td>
-                <td>${cadastros[i].cpf}</td> 
+                <td>${(cadastros[i].cpf).replace(/(\d{3})(\d{3})(\d{3})(\d{2})/, "$1.$2.$3-$4")}</td> 
                 <td>${cadastros[i].nasc}</td> 
                 <td>${idade}</td>
                 <td>${idade >= 18? "Sim": "Não"}</td>  
